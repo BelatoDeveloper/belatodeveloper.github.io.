@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.cabecalho {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cabecalho img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+}
+
+.secao-sobre, .secao-contato {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secao-sobre h2, .secao-contato h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="date"], 
+select, 
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.opcoes-radio {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.linha-checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #2980b9;
+}
+
+.erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .grupo-campo:nth-child(6), 
+    .grupo-campo:nth-child(7), 
+    .botao {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .conteudo-principal {
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .secao-sobre {
+        flex: 1;
+        position: sticky;
+        top: 20px;
+    }
+
+    .secao-contato {
+        flex: 2;
+    }
+}

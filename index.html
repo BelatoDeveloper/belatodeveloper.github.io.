@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Belato - Futuro Dev</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="/css/imgs/eduardo.jpeg" alt="foto_de_eduardo">
+        <h1>Eduardo Belato Nazioseno</h1>
+        <p>Futuro Dev | Portfólio para contato pessoal</p>
+    </header>
+
+    <main class="conteudo-principal">
+        
+        <section class="secao-sobre">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou estudante do 3º período de Análise e Desenvolvimento de Sistemas (ADS) no IFRO, campus Ariquemes.</p>
+            <p>Meu interesse principal na área de tecnologia, é aprender sobre problemas de sistemas como: falhas, vulnerabilidade e bug bountys. Quero ingressar futuramente na área de cybersegurança</p>
+        </section>
+
+        <section class="secao-contato">
+            <h2>Entre em Contato</h2>
+            <form id="formulario-contato" class="formulario">
+                
+                <div class="grupo-campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <span class="erro" id="erro-nome"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefone">Número de Contato:</label>
+                    <input type="number" id="telefone" placeholder="Apenas números">
+                    <span class="erro" id="erro-telefone"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="data-retorno">Melhor data para retorno:</label>
+                    <input type="date" id="data-retorno">
+                    <span class="erro" id="erro-data"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto">
+                        <option value="">Selecione uma opção</option>
+                        <option value="freelance">Oportunidade Freelance</option>
+                        <option value="networking">Networking</option>
+                        <option value="duvida">Dúvida Técnica</option>
+                        <option value="duvida">Outros (não listado)</option>
+                        
+                    </select>
+                    <span class="erro" id="erro-assunto"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Área de Interesse:</label>
+                    <div class="opcoes-radio">
+                        <input type="radio" id="front" name="area" value="Frontend">
+                        <label for="front">Front-end</label>
+                        
+                        <input type="radio" id="back" name="area" value="Backend">
+                        <label for="back">Back-end</label>
+                    </div>
+                    <span class="erro" id="erro-area"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+                    <span class="erro" id="erro-mensagem"></span>
+                </div>
+
+                <div class="grupo-campo linha-checkbox">
+                    <input type="checkbox" id="termos">
+                    <label for="termos">Concordo com o envio destes dados (Checkbox)</label>
+                    <span class="erro" id="erro-termos"></span>
+                </div>
+
+                <button type="submit" id="botao-enviar" class="botao">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Eduardo Belato - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>
